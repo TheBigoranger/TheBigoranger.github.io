@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.3.0">
+<meta name="generator" content="Hexo 5.4.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -213,7 +213,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>&emsp;&emsp;最近在做医疗图像处理的项目，合作公司指定要求使用matlab进行测试，最终成品上用C语言的OpenCV库进行移植。同组的同学做Matlab的测试，所以使用C++版本的OpenCV进行移植就是我的工作了。本来觉得在windows下用VS进行移植测试已经够用，无奈新买的游戏本笔电实在太重了，在学校的时候通过teamviewer连回来还是不够丝滑，所以干脆在VPS上也整一份，在外面的时候直接通过ipad通过ssh连到服务器就能编辑测试,图片的预览可以通过输出到owncloud网盘的目录下，直接通过手机下载查询。<br><a id="more"></a></p>
+        <p>&emsp;&emsp;最近在做医疗图像处理的项目，合作公司指定要求使用matlab进行测试，最终成品上用C语言的OpenCV库进行移植。同组的同学做Matlab的测试，所以使用C++版本的OpenCV进行移植就是我的工作了。本来觉得在windows下用VS进行移植测试已经够用，无奈新买的游戏本笔电实在太重了，在学校的时候通过teamviewer连回来还是不够丝滑，所以干脆在VPS上也整一份，在外面的时候直接通过ipad通过ssh连到服务器就能编辑测试,图片的预览可以通过输出到owncloud网盘的目录下，直接通过手机下载查询。<br><span id="more"></span></p>
 <h1 id="C-接口安装"><a href="#C-接口安装" class="headerlink" title="C++接口安装"></a><a target="_blank" rel="noopener" href="https://docs.opencv.org/master/d7/d9f/tutorial_linux_install.html">C++接口安装</a></h1><p>&emsp;&emsp;标题超链接到官方文档了，官方说明解释的十分详细。</p>
 <h2 id="编译环境准备"><a href="#编译环境准备" class="headerlink" title="编译环境准备"></a>编译环境准备</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install build-essential</span><br><span class="line">sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev</span><br><span class="line">sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev</span><br></pre></td></tr></table></figure>
 <p>&emsp;&emsp;第一行命令是编译build工具库安装，基本上每个VPS都预装好了，第二行是cmake的编译必须库，第三行可选的库，用于防止有一些东西没装，导致接口出问题，官方文档说是可选的，亲测如果使用bwh的VPS，会出现apt源里没有部分库，删去即可，ali的VPS无此问题。完美党遇到没有的工具仍想装，请手动导入源。</p>

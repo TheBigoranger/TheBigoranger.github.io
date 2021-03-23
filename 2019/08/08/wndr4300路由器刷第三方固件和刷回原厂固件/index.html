@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.3.0">
+<meta name="generator" content="Hexo 5.4.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -233,7 +233,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&emsp;&emsp;先给出结论：wndr4300路由器刷第三方固件拓展可玩性是可行的，但自由度的扩大带来的是系统部分性能的损失以及复杂的调试工作，刷入第三方固件，哪怕是官方第三方固件，都没有办法轻易通过可视化交互方式轻松刷回原厂固件，希望在刷之前三思。我刷了固件之后经过一番调试成功使用OpenWrt的官方固件达到了流量转发和无线wifi的功能。但是由于第三方固件的原因，穿墙能力以及带宽限制导致网速和稍远的连接不稳定，所以在家人的要求下，最后又刷回了原厂固件。这是一篇关于我折腾wndr4300路由器的博客，希望能对你有所帮助。<br><a id="more"></a></p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&emsp;&emsp;先给出结论：wndr4300路由器刷第三方固件拓展可玩性是可行的，但自由度的扩大带来的是系统部分性能的损失以及复杂的调试工作，刷入第三方固件，哪怕是官方第三方固件，都没有办法轻易通过可视化交互方式轻松刷回原厂固件，希望在刷之前三思。我刷了固件之后经过一番调试成功使用OpenWrt的官方固件达到了流量转发和无线wifi的功能。但是由于第三方固件的原因，穿墙能力以及带宽限制导致网速和稍远的连接不稳定，所以在家人的要求下，最后又刷回了原厂固件。这是一篇关于我折腾wndr4300路由器的博客，希望能对你有所帮助。<br><span id="more"></span></p>
 <h1 id="wndr4300的替代方案"><a href="#wndr4300的替代方案" class="headerlink" title="wndr4300的替代方案"></a>wndr4300的替代方案</h1><p>&emsp;&emsp;因为自己即将要出国的缘故，从学长那里了解到在国外留学对国内网络环境的需求还是蛮大的（像网易云，bilibili等），遂萌生了自己动手搭建一个从国内向国外的流量转发渠道的想法。<br>&emsp;&emsp;本身自己有通过vps搭建<del>不可描述上网工具</del>的经历，所以在选择方案的时候就希望能在中国地区租用或者架设一台拥有中国ip地址的服务器，以此来进行流量转发。</p>
 <h2 id="中国ip的云服务器"><a href="#中国ip的云服务器" class="headerlink" title="中国ip的云服务器"></a>中国ip的云服务器</h2><p>&emsp;&emsp;那么既然要租借/搭建服务器，首推的就是国内所谓的各种“云”,e.g.阿里云，腾讯云，华为云，毕竟是人家已经成熟的技术。随手查了一下，发现各家的带宽都很小<a target="_blank" rel="noopener" href="https://www.wn789.com/31787.html">（学生套餐对比）</a>，感觉事情有些隐隐的不对劲。随即上自己的阿里云组了一下自己觉得够用的配置：<br>&emsp;&emsp;带宽：<br><img src='阿里云ECS带宽.png' height='85%' width=85%' />
 &emsp;&emsp;实例价格：
