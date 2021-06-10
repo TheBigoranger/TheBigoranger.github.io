@@ -150,6 +150,79 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://blog.theseele.site/2021/06/10/%E4%B8%80%E4%B8%AA%E8%87%AA%E7%94%A8%E7%9A%84-vimrc%E6%A8%A1%E6%9D%BF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="bigoranger">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="橘子的技术blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/10/%E4%B8%80%E4%B8%AA%E8%87%AA%E7%94%A8%E7%9A%84-vimrc%E6%A8%A1%E6%9D%BF/" class="post-title-link" itemprop="url">一个自用的.vimrc模板</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-06-10 04:49:51 / 修改时间：05:09:32" itemprop="dateCreated datePublished" datetime="2021-06-10T04:49:51+00:00">2021-06-10</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/06/10/%E4%B8%80%E4%B8%AA%E8%87%AA%E7%94%A8%E7%9A%84-vimrc%E6%A8%A1%E6%9D%BF/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/06/10/%E4%B8%80%E4%B8%AA%E8%87%AA%E7%94%A8%E7%9A%84-vimrc%E6%A8%A1%E6%9D%BF/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>分享一个自用的.vimrc模板，需要配合Vundle使用。<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> nocompatible</span><br><span class="line"><span class="keyword">filetype</span> off </span><br><span class="line"></span><br><span class="line"><span class="comment">&quot; set up the  runtime path</span></span><br><span class="line"><span class="keyword">set</span> rtp+=~/.<span class="keyword">vim</span>/bundle/Vundle.<span class="keyword">vim</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&quot; show the row number</span></span><br><span class="line"><span class="keyword">set</span> <span class="keyword">nu</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&quot; allocate the width of tab as 4 space</span></span><br><span class="line"><span class="keyword">set</span> <span class="keyword">ts</span>=<span class="number">4</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&quot; highlight the cursor line</span></span><br><span class="line"><span class="keyword">set</span> cursorline</span><br><span class="line"></span><br><span class="line"><span class="comment">&quot; apply the scheme</span></span><br><span class="line"><span class="keyword">syntax</span> <span class="keyword">on</span></span><br><span class="line"><span class="keyword">set</span> t_Co=<span class="number">256</span></span><br><span class="line"><span class="comment">&quot;colorscheme skeletor</span></span><br><span class="line"><span class="comment">&quot;colorscheme molokai</span></span><br><span class="line"><span class="comment">&quot;colorscheme jellybeans</span></span><br><span class="line"><span class="keyword">colorscheme</span> monokai-bold</span><br><span class="line"></span><br><span class="line"><span class="comment">&quot; this is where plugin being used</span></span><br><span class="line"><span class="keyword">call</span> vundle#begin()</span><br><span class="line"></span><br><span class="line"><span class="comment">&quot; Vundle itself~</span></span><br><span class="line">Plugin <span class="string">&#x27;VundleVim/Vundle.vim&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&quot; Color scheme</span></span><br><span class="line">Plugin <span class="string">&#x27;flazz/vim-colorschemes&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&quot; the bracket plug</span></span><br><span class="line">Plugin <span class="string">&#x27;frazrepo/vim-rainbow&#x27;</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">g:rainbow_active</span> = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&quot; told you what type of file you r dealing with and what mode you r under</span></span><br><span class="line">Plugin <span class="string">&#x27;itchyny/lightline.vim&#x27;</span></span><br><span class="line"><span class="comment">&quot; close the original mode display and apply the new one</span></span><br><span class="line"><span class="keyword">set</span> noshowmode</span><br><span class="line"><span class="keyword">set</span> laststatus=<span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&quot; nerd tree on side</span></span><br><span class="line">Plugin <span class="string">&#x27;scrooloose/nerdtree&#x27;</span>						</span><br><span class="line"><span class="keyword">map</span> <span class="symbol">&lt;C-d&gt;</span> :NERDTreeToggle<span class="symbol">&lt;CR&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&quot; support for the markdown</span></span><br><span class="line">Plugin <span class="string">&#x27;godlygeek/tabular&#x27;</span></span><br><span class="line">Plugin <span class="string">&#x27;plasticboy/vim-markdown&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&quot; auto pair</span></span><br><span class="line">Plugin <span class="string">&#x27;Raimondi/delimitMate&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&quot; neo complete</span></span><br><span class="line">Plugin <span class="string">&#x27;Shougo/neocomplcache&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&quot; easy tags</span></span><br><span class="line"></span><br><span class="line">Plugin <span class="string">&#x27;majutsushi/tagbar&#x27;</span></span><br><span class="line">Plugin <span class="string">&#x27;xolox/vim-misc&#x27;</span></span><br><span class="line">Plugin <span class="string">&#x27;xolox/vim-easytags&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&quot; tagbar</span></span><br><span class="line">Plugin <span class="string">&#x27;jszakmeister/markdown2ctags&#x27;</span></span><br><span class="line"><span class="comment">&quot; Add support for markdown files in tagbar.</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">g:tagbar_type_markdown</span> = &#123;</span><br><span class="line">		    \ <span class="string">&#x27;ctagstype&#x27;</span>: <span class="string">&#x27;markdown&#x27;</span>,</span><br><span class="line">			    \ <span class="string">&#x27;ctagsbin&#x27;</span> : <span class="string">&#x27;/root/.vim/bundle/markdown2ctags/markdown2ctags.py&#x27;</span>,</span><br><span class="line">				    \ <span class="string">&#x27;ctagsargs&#x27;</span> : <span class="string">&#x27;-f - --sort=yes --sro=»&#x27;</span>,</span><br><span class="line">					    \ <span class="string">&#x27;kinds&#x27;</span> : [</span><br><span class="line">								        \ <span class="string">&#x27;s:sections&#x27;</span>,</span><br><span class="line">										        \ <span class="string">&#x27;i:images&#x27;</span></span><br><span class="line">												    \ ],</span><br><span class="line">													    \ <span class="string">&#x27;sro&#x27;</span> : <span class="string">&#x27;»&#x27;</span>,</span><br><span class="line">														    \ <span class="string">&#x27;kind2scope&#x27;</span> : &#123;</span><br><span class="line">																	        \ <span class="string">&#x27;s&#x27;</span> : <span class="string">&#x27;section&#x27;</span>,</span><br><span class="line">																			    \ &#125;,</span><br><span class="line">																				    \ <span class="string">&#x27;sort&#x27;</span>: <span class="number">0</span>,</span><br><span class="line">																						\ &#125;</span><br><span class="line">																						<span class="keyword">map</span> <span class="symbol">&lt;F4&gt;</span> :TagbarToggle<span class="symbol">&lt;CR&gt;</span></span><br><span class="line"></span><br><span class="line">																						<span class="keyword">let</span> <span class="variable">g:neocomplcache_enable_at_startup</span> = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">																						<span class="keyword">se</span> mouse+=<span class="keyword">a</span></span><br><span class="line">																						<span class="keyword">call</span> vundle#end()</span><br><span class="line">																						<span class="keyword">filetype</span> plugin <span class="built_in">indent</span> <span class="keyword">on</span></span><br><span class="line">																						<span class="comment">&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://blog.theseele.site/2020/02/25/Vscode-texlive%E6%89%93%E9%80%A0win10%E4%B8%8B%E7%9A%84Latex%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -181,7 +254,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-24 01:38:35" itemprop="dateModified" datetime="2021-03-24T01:38:35+00:00">2021-03-24</time>
+                <time title="修改时间：2021-06-10 04:42:29" itemprop="dateModified" datetime="2021-06-10T04:42:29+00:00">2021-06-10</time>
               </span>
 
           
@@ -901,7 +974,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
